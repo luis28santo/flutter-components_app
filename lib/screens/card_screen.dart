@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_components/theme/app_theme.dart';
+
+import '../widgets/widgets.dart';
 
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
@@ -12,19 +13,13 @@ class CardScreen extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        children: [
-          Card(
-            child: Column(
-              children: const [
-                ListTile(
-                  leading: Icon(Icons.photo_album_rounded,
-                      color: AppTheme.primaryColor),
-                  title: Text('Soy un titulo'),
-                  subtitle: Text(
-                      'Ad in mollit in minim elit occaecat eiusmod ea occaecat aliquip commodo. Reprehenderit duis eu incididunt sunt irure reprehenderit enim id dolor dolor velit. Proident et excepteur commodo reprehenderit qui culpa pariatur ipsum fugiat consequat elit.'),
-                )
-              ],
-            ),
+        children: const [
+          CustomCardType1(),
+          SizedBox(height: 20),
+          CustomCardType2(
+            imageUrl:
+                'https://cloudfront-us-east-1.images.arcpublishing.com/infobae/XZBB6JZSVZFTBANAUJVCC7VQX4.jpg',
+            // name: 'Un Hermoso paisaje',
           ),
         ],
       ),

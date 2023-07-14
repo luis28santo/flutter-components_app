@@ -33,13 +33,25 @@ class AppRoutes {
         icon: Icons.credit_card,
         name: 'Cards',
         screen: const CardScreen()),
+    MenuOption(
+        route: 'avatar',
+        icon: Icons.supervised_user_circle,
+        name: 'Circle Avatar',
+        screen: const AvatarScreen()),
+    MenuOption(
+        route: 'animated',
+        icon: Icons.play_circle_fill_outlined,
+        name: 'Animated Container',
+        screen: const AnimatedScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
 
-    AppRoutes.menuOptions.forEach((option) => appRoutes
-        .addAll({option.route: (BuildContext buildContext) => option.screen}));
+    for (var option in AppRoutes.menuOptions) {
+      appRoutes
+        .addAll({option.route: (BuildContext buildContext) => option.screen});
+    }
 
     return appRoutes;
   }

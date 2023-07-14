@@ -22,7 +22,7 @@ class ListView2Screen extends StatelessWidget {
       body: ListView.separated(
         itemCount: options.length,
         itemBuilder: (context, index) => ListTile(
-            onTap: () => print('${options[index]}'),
+            onTap: () => print(options[index]),
             title: Text(options[index]),
             trailing: const Icon(
               Icons.arrow_forward_ios,
