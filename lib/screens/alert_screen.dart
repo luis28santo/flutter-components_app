@@ -17,9 +17,9 @@ class AlertScreen extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusDirectional.circular(15),
             ),
-            content: const Column(
+            content: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
+              children: const [
                 Text('Este es el contenido de una alerta'),
                 SizedBox(height: 10),
                 FlutterLogo(size: 100),
@@ -44,9 +44,9 @@ class AlertScreen extends StatelessWidget {
         builder: (buildContext) {
           return CupertinoAlertDialog(
             title: const Text('Titulo'),
-            content: const Column(
+            content: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
+              children: const [
                 Text('Este es el contenido de una alerta'),
                 SizedBox(height: 10),
                 FlutterLogo(size: 100),
