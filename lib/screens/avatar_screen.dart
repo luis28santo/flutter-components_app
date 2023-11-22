@@ -21,8 +21,7 @@ class AvatarScreen extends StatelessWidget {
       body: const Center(
         child: CircleAvatar(
           maxRadius: 150,
-          backgroundImage: NetworkImage(
-              'https://www.indiewire.com/wp-content/uploads/2022/05/Stan-Lee.jpg'),
+          backgroundImage: NetworkImage('https://www.indiewire.com/wp-content/uploads/2022/05/Stan-Lee.jpg'),
         ),
       ),
     );

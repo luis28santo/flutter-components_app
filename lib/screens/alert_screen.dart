@@ -26,12 +26,8 @@ class AlertScreen extends StatelessWidget {
               ],
             ),
             actions: [
-              TextButton(
-                  onPressed: () => Navigator.pop(buildContext),
-                  child: const Text('Cancelar')),
-              TextButton(
-                  onPressed: () => Navigator.pop(buildContext),
-                  child: const Text('OK')),
+              TextButton(onPressed: () => Navigator.pop(buildContext), child: const Text('Cancelar')),
+              TextButton(onPressed: () => Navigator.pop(buildContext), child: const Text('OK')),
             ],
           );
         });
@@ -55,8 +51,7 @@ class AlertScreen extends StatelessWidget {
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(buildContext),
-                child:
-                    const Text('Cancelar', style: TextStyle(color: Colors.red)),
+                child: const Text('Cancelar', style: TextStyle(color: Colors.red)),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(buildContext),
@@ -76,9 +71,7 @@ class AlertScreen extends StatelessWidget {
         //     backgroundColor: AppTheme.primaryColor,
         //     shape: const StadiumBorder(),
         //     elevation: 0),
-        onPressed: () => Platform.isAndroid
-            ? displayDialogAndroid(context)
-            : displayDialogIOS(context),
+        onPressed: () => Platform.isAndroid ? displayDialogAndroid(context) : displayDialogIOS(context),
         child: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: Text('Mostrar Alerta', style: TextStyle(fontSize: 20)),

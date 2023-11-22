@@ -44,9 +44,7 @@ class CustomInputField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText,
         helperText: helperText,
-        suffixIcon: suffixIcon == null
-            ? null
-            : Icon(suffixIcon, color: AppTheme.primaryColor),
+        suffixIcon: suffixIcon == null ? null : Icon(suffixIcon, color: AppTheme.primaryColor),
         icon: icon == null ? null : Icon(icon, color: AppTheme.primaryColor),
       ),
     );
